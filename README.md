@@ -2,4 +2,4 @@
 
 ## Basic Digital Literacy
 
-- [Terminal](./Basic\ Digital\ Literacy/Terminal.md)
+- [Terminal](<./Basic Digital Literacy/Terminal.md>)
