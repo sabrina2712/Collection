@@ -72,3 +72,8 @@
 | mkdir -p [dir]/[dir] | Create nested directories                               |
 | rmdir [dir]          | Remove directory ( only operates on empty directories ) |
 | rm -R [dir]          | Remove directory and contents                           |
+
+### HELP
+
+| man [command] | Show the help for 'command' |
+| whatis [command] | Gives a one-line description of 'command' |
