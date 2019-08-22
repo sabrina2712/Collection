@@ -12,6 +12,8 @@
     - [Italic](#italic)
   - [Todo Lists](#todo-lists)
   - [Tables](#tables)
+  - [Quotes](#quotes)
+  - [Code Formatting](#code-formatting)
 
 <!-- /TOC -->
 
@@ -73,3 +75,33 @@ Unfortunately formatting depends often on the flavor of markdown (different inte
 | Align Header | Left          |          Right | Center            |
 | ------------ | :------------ | -------------: | ----------------- |
 |              | : on the left | : on the right | default is center |
+
+| Shopping item |  Price |
+| :------------ | -----: |
+| Avocado       |   1,99 |
+| Banana        |   0,50 |
+| Whisky        | 400,99 |
+
+## Quotes
+
+> Knowledge comes, but wisdom lingers.
+
+## Code Formatting
+
+This is a inline `code` formatting.
+
+Or for complete code snippets we can use code blocks
+
+```html
+<h1>Hi</h1>
+```
+
+```css
+.hi {
+  color: hotpink;
+}
+```
+
+```bash
+cd ../TerminalIsFun
+```
