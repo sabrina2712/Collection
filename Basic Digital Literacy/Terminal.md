@@ -24,6 +24,7 @@
 | cd [folder]    | Change directory                                                          |
 | cd ~           | Home directory, e.g. ‘cd ~/folder/’                                       |
 | cd /           | Root of drive                                                             |
+| cd -           | Move to last directory                                                    |
 | ls             | Short listing                                                             |
 | ls -l          | Long listing                                                              |
 | ls -a          | Listing incl. hidden files                                                |
