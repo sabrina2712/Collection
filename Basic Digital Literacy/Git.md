@@ -2,6 +2,6 @@
 
 # Commands
 
-| Command |                                      Description |
-| ------- | -----------------------------------------------: |
-| Push    | Update remote refs along with associated objects |
+| Command |                                                        Description |
+| ------- | -----------------------------------------------------------------: |
+| Pull    | Fetch from and integrate with another repository or a local branch |
