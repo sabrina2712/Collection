@@ -2,8 +2,6 @@
 
 ## Command
 
-Really need a merge conflict
-
 | Command | Description                                                                              |
 | :------ | ---------------------------------------------------------------------------------------- |
 | commit  | record change to the repository                                                          |
@@ -11,3 +9,4 @@ Really need a merge conflict
 | Pull    | Fetch from and integrate with another repository or a local branch                       |
 | log     | Show commit logs                                                                         |
 | init    | Create an empty Git repository or reinitialize an existing one                           |
+| push    | Update remote refs along with associated objects                                         |
