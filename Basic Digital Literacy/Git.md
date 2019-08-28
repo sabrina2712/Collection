@@ -1,5 +1,5 @@
 # Git
 
-| Command | Description                     |
-| :------ | ------------------------------- |
-| commit  | record change to the repository |
+| Command | Description      |
+| :------ | ---------------- |
+| log     | Show commit logs |
