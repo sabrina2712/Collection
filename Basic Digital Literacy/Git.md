@@ -1,6 +1,6 @@
 # Git
 
-Really need a merge conflict
+## Command
 
 | Command | Description                                                                              |
 | :------ | ---------------------------------------------------------------------------------------- |
