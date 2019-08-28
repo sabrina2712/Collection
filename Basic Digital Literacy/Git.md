@@ -11,3 +11,9 @@
 | log     | Show commit logs                                                                         |
 | pull    | Fetch from and integrate with another repository or a local branch                       |
 | push    | Update remote refs along with associated objects                                         |
+
+### Log
+
+| Option | Description                                                                                             |
+|--------|---------------------------------------------------------------------------------------------------------|
+| --graph| Draw a text-based graphical representation of the commit history on the left hand side of the output    |
