@@ -1,0 +1,188 @@
+/* Some general styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 0;
+}
+
+.container-spacing {
+  padding: 0 20px;
+}
+
+/* so images do not overflow their parent causing a horizontal scrollbar */
+img {
+  max-width: 100%;
+}
+
+/*
+  This adds a nice effect when users select text with the mouse,
+  it can be useful to remove stuff like text shadow
+*/
+::selection {
+  background-color: black;
+  color: white;
+}
+
+/*
+  ::first-letter is a pseudo element indicating the first letter of an element,
+  here it is selecting the 1st letter of the 1st paragraph inside the section
+  with the class .section-first-letter
+*/
+.section-first-letter p:first-of-type::first-letter {
+  font-size: 50px;
+}
+
+
+/* before and after pseudo elements */
+h2:first-of-type::before {
+  display: inline-block; /* by default before and after pseudo elements have display inline */
+  content: 'Some text'; /* you can put any text in here and it will appear as if it was a real child of the h2 */
+  background-color: coral;
+  padding: 0 8px;
+  color: white;
+}
+
+h2:nth-of-type(2)::before { /* try to use ::after instead of ::before  */
+  display: inline-block; /* by default before and after pseudo elements have display inline */
+  content: attr(data-content); /* you can put any text in here and it will appear as if it was a real child of the h2 */
+  background-color: coral;
+  padding: 0 8px;
+  color: white;
+}
+
+/* before and after pseudo elements in combination with position */
+h1 {
+  position: relative;
+  padding-left: 8px; /* since the before pseudo element is positioned absolutely, there is no space reserved for it and it will appear on top of the content of the h1. To make some space for it, we need to add some padding on the h1.  */
+}
+
+h1::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0; /* without specifying height, with top: 0 and bottom: 0 the element will stretch to take the whole height of its parent */
+  display: block;
+  content: ''; /* without a content property the pseudo element will not appear */
+  width: 4px;
+  /* height: 10px; */
+  background-color: lightgray;
+}
+
+/* Fixed header */
+header {
+  position: fixed;
+  top: 0; /* this is relative to the viewport of the browser */
+  z-index: 99; /* z-index is needed so other positioned element don't overlap the header */
+  width: 100%;
+  background-color: crimson;
+  color: white;
+  padding: 16px 32px;
+}
+
+main {
+  /*
+    add some padding on the main element,
+    as it is wrapping all other elements.
+    Without the padding, the fixed header
+    will hide some of our content
+  */
+  padding: 100px 0;
+}
+
+.content-container {
+  padding: 0 20px; /* so the content has some space from the edge of the viewport */
+  margin: 0 auto; /* this line does the centering, it basically tells the browser to get the available space and split it between the left and right margin */
+  width: 100%;
+  max-width: 600px; /* you need to set a width, so you can see the centering, using max-width instead of fixed width makes sure on smaller screen the content will not overflow */
+}
+
+/* Container with a close button in the upper right corner */
+.container-close-button {
+  position: relative;
+  border: 1px solid lightgray;
+  margin: 50px 20px;
+  padding: 40px 20px 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 12px;
+}
+
+/* Width and height */
+
+/* The image takes 100% of the width of its parent (the sections with a class container-*) */
+.container-sizing img {
+  width: 100%;
+}
+
+/* Each container takes a different percentage of their parent, and the image that is inside stretches only as big as these containers are */
+.container-25 {
+  width: 25%;
+}
+
+.container-50 {
+  width: 50%;
+}
+
+.container-75 {
+  width: 75%;
+}
+
+.container-100 {
+  width: 100%;
+}
+
+/* A container taking the full height of the browser */
+.container-full-height {
+  height: 100vh;
+  background-color: salmon;
+  padding: 50px;
+  color: white;
+}
+
+/* Font sizing with em */
+/* Option 1 */
+/* Set default sizing for the parent */
+.list-tree {
+  font-size: 20px;
+}
+
+/* Each list item in it will get a size of 0.9em from its parent .list-tree  */
+.list-tree li {
+  font-size: 0.9em;
+}
+
+/* Option 2 */
+/* Without using classes, all list items get 0.9em from its parent the ul  */
+ul li {
+  font-size: 0.75em;
+}
+
+/* Font sizing */
+html {
+  font-size: 16px; /* pixels are absolute values, and will not take into consideration user preferences, but you can still use this approach */
+  font-size: 62.5%; /* 62.5% out of the default 16px will be 10px - we use this so calculations are easier, if we want to set 16px, we set 1.6rem */
+}
+
+.container-sizing {
+  font-size: 2rem; /* size is 10 (root font sizing) * 2 -> 20px */
+}
+
+.container-sizing h4 {
+  font-size: 2em; /* size is 2 * 20 (container-sizing font size) -> 40px */
+}
+
+.container-sizing p {
+  font-size: 1em; /* size is 1 * 20 (container-sizing font size) -> 20px */
+  line-height: 1.2;
+}
