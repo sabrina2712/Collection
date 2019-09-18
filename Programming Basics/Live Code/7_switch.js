@@ -4,7 +4,7 @@ if (true) {
 } else {
 }
 
-const transportationMethod = "Moon Walking"; // This comes form somewhere we do not control
+const transportationMethod = "Walking"; // This comes form somewhere we do not control
 let matchedCase;
 switch (transportationMethod) {
   case "Moon Walking":
@@ -30,22 +30,36 @@ switch (transportationMethod) {
   case "Next":
   case "Running": {
     console.log("🏃‍♀️");
-    return;
+    break;
   }
   case "Walking": {
     console.log("🏃‍♀️");
-    return;
+    break;
   }
   case "Bike": {
     console.log("🚲");
-    return;
+    break;
   }
   case "Car": {
     console.log("🚗");
-    return;
+    break;
   }
   default: {
     console.log("🤷‍♀");
-    return;
   }
 }
+
+console.log("Hi");
+
+// Abusing the switch statement to do if else else if work!
+// Beware order is now very important, first case (match) wins!
+switch (true) {
+  case 205 < 25:
+    console.log("True");
+    break;
+
+  default:
+    break;
+}
+
+console.log("End of File");
