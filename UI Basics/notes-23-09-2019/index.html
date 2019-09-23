@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UI Basics: 23.09.2019</title>
+  <!-- including normalize.css to normalize the user agent styles (these are the styles applied by the browser) -->
+  <link rel="stylesheet" href="/styles/normalize.css">
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+  <!--
+  Few ways to hide content:
+
+  no height in combination with overflow: hidden; or opacity: 0; visibility: hidden;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  display: none;
+
+  comment out: if you comment an element out it will not be rendered and later you cannot comment it back in based on user interaction
+  -->
+
+  <!-- hiding elements -->
+  <section class="content-container">
+    <h2 class="content-container-headline">Hiding elements</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <h1 class="hello-world hide-with-opacity">
+      hello world
+    </h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <h1 class="hello-world hide-with-visibility">
+      hello world
+    </h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <h1 class="hello-world hide-with-display">
+      hello world
+    </h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </section>
+
+  <!-- overflowing content or css is awesome -->
+  <section class="content-container">
+    <h2 class="content-container-headline">Overflowing content or css is awesome</h2>
+    <section class="css-is-awesome">
+      CSS is awesome
+    </section>
+
+    <section class="css-is-awesome word-break">
+      CSS is awesome
+    </section>
+
+    <section class="css-is-awesome scrolling">
+      CSS is awesome
+    </section>
+
+    <section class="css-is-awesome ellipsis" title="CSS is awesome">
+      CSS is awesome
+    </section>
+  </section>
+
+  <!-- centering with absolute positioning -->
+  <section class="content-container">
+    <h2 class="content-container-headline">Centering with absolute positioning</h2>
+
+    <section class="center-with-absolute-container">
+      <div class="element">Positioned absolutely</div>
+    </section>
+  </section>
+
+  <!-- stretch with absolute positioning -->
+  <section class="content-container">
+    <h2 class="content-container-headline">Stretch with absolute positioning</h2>
+
+    <section class="stretch-with-absolute-container">
+      <div class="element">Positioned absolutely</div>
+    </section>
+  </section>
+
+  <!-- below the line with absolute positioning -->
+  <section class="content-container">
+    <h2 class="content-container-headline">Right bellow the edge of the container with absolute positioning</h2>
+
+    <section class="below-the-line-with-absolute-container">
+      <div class="element">Positioned absolutely</div>
+    </section>
+  </section>
+
+  <!-- slider -->
+  <section class="content-container">
+    <h2 class="content-container-headline">Slider</h2>
+    <section class="slider">
+      <div class="slider-item"></div>
+      <div class="slider-item"></div>
+      <div class="slider-item"></div>
+      <div class="slider-item"></div>
+      <div class="slider-item"></div>
+      <div class="slider-item"></div>
+      <div class="slider-item"></div>
+      <div class="slider-item"></div>
+    </section>
+  </section>
+
+  <!-- sticky -->
+  <section class="content-container">
+    <h2 class="content-container-headline">Sticky header</h2>
+
+    <section class="sticky-section">
+      <header>
+        <h1>Sticky</h1>
+      </header>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eius, repellat commodi maiores aliquam, aspernatur quod odit ipsa accusantium ullam blanditiis enim, autem quasi saepe distinctio ea ex repellendus illo?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eius, repellat commodi maiores aliquam, aspernatur quod odit ipsa accusantium ullam blanditiis enim, autem quasi saepe distinctio ea ex repellendus illo?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eius, repellat commodi maiores aliquam, aspernatur quod odit ipsa accusantium ullam blanditiis enim, autem quasi saepe distinctio ea ex repellendus illo?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora eaque, voluptas esse sunt ea sint obcaecati est quis expedita corrupti, reiciendis quae officiis, aut ipsa praesentium eos nemo illum reprehenderit?
+        </p>
+      </div>
+    </section>
+  </section>
+
+  <!-- inline parent, block child -->
+  <section class="content-container">
+    <h2 class="content-container-headline">Inline parent, block child</h2>
+
+    <ul class="inline-parent-container">
+      <li>
+        <a href="#">
+          <p>Lorem ipsum dolor <span>sit amet</span>, consectetur adipisicing elit. Eaque unde cum itaque dicta architecto porro aut, aspernatur quasi earum nam consectetur dolore culpa aperiam impedit. Earum, minima cumque dolor laudantium.</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde cum itaque dicta architecto porro aut, aspernatur quasi earum nam consectetur dolore culpa aperiam impedit. Earum, minima cumque dolor laudantium.</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- width with inline-block -->
+  <section class="content-container">
+    <h2 class="content-container-headline">Inline parent, block child</h2>
+
+    <ul class="width-with-inline-block">
+      <li>
+        <a href="#">
+          <p>Lorem ipsum dolor <span>sit amet</span>, consectetur adipisicing elit. Eaque unde cum itaque dicta architecto porro aut, aspernatur quasi earum nam consectetur dolore culpa aperiam impedit. Earum, minima cumque dolor laudantium.</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde cum itaque dicta architecto porro aut, aspernatur quasi earum nam consectetur dolore culpa aperiam impedit. Earum, minima cumque dolor laudantium.</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde cum itaque dicta architecto porro aut, aspernatur quasi earum nam consectetur dolore culpa aperiam impedit. Earum, minima cumque dolor laudantium.</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+</body>
+</html>

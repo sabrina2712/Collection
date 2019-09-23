@@ -1,0 +1,216 @@
+/* some general styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.content-container-headline {
+  position: relative;
+  padding-left: 8px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+.content-container-headline::before {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 4px;
+  height: 100%;
+  background-color: orange;
+  content: '';
+}
+
+/* hiding elements */
+
+/* reserves space for the element */
+.hide-with-opacity {
+  opacity: 0;
+}
+
+/* I can still interact with the element */
+.hide-with-opacity:hover {
+  opacity: 1;
+}
+
+/* reserves space for the element */
+.hide-with-visibility {
+  visibility: hidden;
+}
+
+/* I can no longer interact with the element */
+.hide-with-visibility:hover {
+  visibility: visible;
+}
+
+/* space for the element is collapsed, we don't see it at all */
+.hide-with-display {
+  display: none;
+}
+
+/* I can no longer interact with the element */
+.hide-with-display:hover {
+  display: block;
+}
+
+/* overflow */
+.css-is-awesome {
+  text-transform: uppercase;
+  border: 1px solid;
+  padding: 5px;
+  width: 155px; /* adding a fixed width to force the content to overflow since the word awesome will not be broken */
+  margin-bottom: 30px;
+  font-size: 45px;
+}
+
+.word-break {
+  word-break: break-all; /* it solves the issue but the result might be hard to read */
+}
+
+.scrolling {
+  overflow: auto; /* a good way to hide the overflow but to still make it accessible to the user */
+}
+
+.ellipsis {
+  overflow: hidden; /* if you leave auto instead, you will still have the empty space where the word would have been */
+  text-overflow: ellipsis; /* this solution looks great, but we need to give some way to the user to see the whole content - see HTML */
+}
+
+/* Centering with absolute position and known width and height */
+.center-with-absolute-container {
+  position: relative;
+  height: 300px; /* We need to specify height, because this container has only 1 child which is positioned absolutely and it does take any space on screen. We also need the height so we can center this child. */
+  background-color: salmon;
+}
+
+.center-with-absolute-container .element {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; /* Specifying 0 for each offset in combination with margin: auto; give us the centering effect. This will not work if we have unknown heights. */
+  background-color: rgba(255,255,255,0.6);
+  width: 30%;
+  height: 30%; /* This is 30% of the 300px we specified for the parent */
+  margin: auto;
+  padding: 10px;
+}
+
+.stretch-with-absolute-container {
+  position: relative;
+  height: 300px;
+  background-color: salmon;
+}
+
+.stretch-with-absolute-container .element {
+  position: absolute;
+  top: 0;
+  bottom: 0; /* when the element has no fixed height, specifying offsets to 0 in combination margin: auto; will make the element fill the entire height of its parent */
+  background-color: rgba(255,255,255,0.6);
+  margin: auto;
+  padding: 10px;
+}
+
+.below-the-line-with-absolute-container {
+  position: relative;
+  height: 300px;
+  background-color: salmon;
+}
+
+.below-the-line-with-absolute-container .element {
+  position: absolute;
+  top: 100%;
+  background-color: rgb(255, 230, 228);
+  padding: 5px 10px;
+}
+
+/* Simple slider  */
+.slider {
+  border: 1px solid gray;
+  height: 150px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.slider-item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: pink;
+  margin-right: 20px; /* putting some space between the items */
+}
+
+.slider-item:nth-last-of-type(odd) {
+  background-color: purple;
+}
+
+.slider-item:last-child {
+  margin-right: 0; /* let's clear the space after the last child, so it ends at the edge of its parent container */
+}
+
+/* sticky header */
+.sticky-section {
+  height: 250px;
+  overflow: auto;
+  border: 1px solid gray;
+}
+
+.sticky-section header {
+  position: sticky; /* elements with position sticky need a parent with scrollable content */
+  top: 0; /* offset to which to stick */
+  background: rgba(255,255,255,0.5);
+  padding: 8px 16px;
+}
+
+.sticky-section div {
+  padding: 8px 16px;
+}
+
+.sticky-section h1 {
+  margin: 0;
+}
+
+/* inline parent, block child */
+.inline-parent-container a {
+  display: block; /* without this line we will not be able to see the background color of the anchor tags (anchor tags are displayed inline by default) */
+  background-color: salmon;
+}
+
+.inline-parent-container li {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.width-with-inline-block {
+  padding: 0;
+  text-align: center; /* we can center the list items because they have display: inline-block; */
+}
+
+.width-with-inline-block a {
+  display: block;
+  border: 1px solid gray;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.width-with-inline-block li {
+  width: 20%;
+  display: inline-block; /* there is some white space between each li, which is not ignored by the browser but is displayed instead */
+}
