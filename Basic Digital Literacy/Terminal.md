@@ -78,3 +78,7 @@
 
 | man [command] | Show the help for 'command' |
 | whatis [command] | Gives a one-line description of 'command' |
+
+## Resources
+
+* [CMD Challenge](https://cmdchallenge.com/)
