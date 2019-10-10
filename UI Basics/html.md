@@ -206,6 +206,10 @@ HTML5 adds many semantic elements, to name few:
 crawlers. For example, `<h1>` indicates the most important piece of information on
 the page or within a section.
 
+### Resources:
+
+* [How to Section Your HTML](https://css-tricks.com/how-to-section-your-html/)
+
 # HTML elements
 
 ## Anchor tag
