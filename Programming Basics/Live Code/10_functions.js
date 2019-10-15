@@ -1,127 +1,127 @@
-// /**
-//  * Functions
-//  * aka subroutines
-//  *
-//  * - Reusability
-//  * - Abstraction
-//  * - Organisation
-//  *
-//  * Steps:
-//  *  - Create Function
-//  *  - Call Function (Invoking a function)
-//  */
+/**
+ * Functions
+ * aka subroutines
+ *
+ * - Reusability
+ * - Abstraction
+ * - Organisation
+ *
+ * Steps:
+ *  - Create Function
+ *  - Call Function (Invoking a function)
+ */
 
-// function myFirstFunction() {
-//   console.log("Hi I'm your first function :)");
-// }
+function myFirstFunction() {
+  console.log("Hi I'm your first function :)");
+}
 
-// // Named functions are stored in variables and are values like any other in JS
-// var myFirstFunction = function() {
-//   console.log("2nd function");
-// };
+// Named functions are stored in variables and are values like any other in JS
+var myFirstFunction = function() {
+  console.log("2nd function");
+};
 
-// // Call our function
-// myFirstFunction();
-// // Referencing function (Value / Variable that hold function)
-// console.log(myFirstFunction);
+// Call our function
+myFirstFunction();
+// Referencing function (Value / Variable that hold function)
+console.log(myFirstFunction);
 
-// // String functions in constants
-// const hello = function(other, name) {
-//   console.log(`Hello ${other}`);
-//   console.log(`Hello ${name}`);
-// };
+// String functions in constants
+const hello = function(other, name) {
+  console.log(`Hello ${other}`);
+  console.log(`Hello ${name}`);
+};
 
-// hello("John", "Paul");
+hello("John", "Paul");
 
-// const greeting = function(personName) {
-//   console.log(`Hi ${personName}`);
-//   console.log("Hi " + personName);
-// };
+const greeting = function(personName) {
+  console.log(`Hi ${personName}`);
+  console.log("Hi " + personName);
+};
 
-// greeting("Rebecca");
-// greeting("Hector");
+greeting("Rebecca");
+greeting("Hector");
 
-// // Working with values the function creates
-// debugger;
-// const times2 = function(aNumber) {
-//   const result = aNumber * 2;
+// Working with values the function creates
+debugger;
+const times2 = function(aNumber) {
+  const result = aNumber * 2;
 
-//   return result;
-// };
+  return result;
+};
 
-// const dayOfTheWeek = times2(1);
-// console.log(dayOfTheWeek);
+const dayOfTheWeek = times2(1);
+console.log(dayOfTheWeek);
 
-// // Write a function called "add" that accepts 2 parameters
-// // and returns the addition of both numbers
+// Write a function called "add" that accepts 2 parameters
+// and returns the addition of both numbers
 
-// function add(num1, num2) {
-//   return num1 + num2;
-// }
+function add(num1, num2) {
+  return num1 + num2;
+}
 
-// console.log(add(5, "Hello") === "5Hello");
-// console.log(add(1, 2) === 3);
-// console.log(add(6, 4) === 10);
+console.log(add(5, "Hello") === "5Hello");
+console.log(add(1, 2) === 3);
+console.log(add(6, 4) === 10);
 
-// // Functions we already know!
-// // console.log
-// // parseInt()
+// Functions we already know!
+// console.log
+// parseInt()
 
-// // Write a function that prints out each individual character
-// // of a given string.
+// Write a function that prints out each individual character
+// of a given string.
 
-// function printEachCharOfWord(word) {
-//   for (let i = 0; i < word.length; i++) {
-//     console.log(word[i]);
-//   }
-// }
+function printEachCharOfWord(word) {
+  for (let i = 0; i < word.length; i++) {
+    console.log(word[i]);
+  }
+}
 
-// printEachCharOfWord("Some string");
+printEachCharOfWord("Some string");
 
-// // 2 Types of functions
-// // - function expression
-// // - arrow function
+// 2 Types of functions
+// - function expression
+// - arrow function
 
-// // Arrow function syntax
-// const myFirstArrowFunc = () => console.log("hi");
-// // variable = (parameters) "Fat Arrow" => return
-// // with code block
-// const withCodeBlock = () => {
-//   return console.log("hi");
-// };
+// Arrow function syntax
+const myFirstArrowFunc = () => console.log("hi");
+// variable = (parameters) "Fat Arrow" => return
+// with code block
+const withCodeBlock = () => {
+  return console.log("hi");
+};
 
-// // with implicit return
-// const addArrow = (num1, num2) => num1 + num2;
-// // with explicit return
-// const addArrow2 = (num1, num2) => {
-//   return num1 + num2;
-// };
-// console.log(addArrow(1, 100));
+// with implicit return
+const addArrow = (num1, num2) => num1 + num2;
+// with explicit return
+const addArrow2 = (num1, num2) => {
+  return num1 + num2;
+};
+console.log(addArrow(1, 100));
 
-// /**
-//  * Pure vs Impure Functions
-//  */
-// let store = "Value";
-// const name = "Oliver";
-// const pureFunction = name => {
-//   return `Hello ${name}`;
-// };
+/**
+ * Pure vs Impure Functions
+ */
+let store = "Value";
+const name = "Oliver";
+const pureFunction = name => {
+  return `Hello ${name}`;
+};
 
-// console.log(pureFunction("Paul"));
+console.log(pureFunction("Paul"));
 
-// const impureFunction = () => {
-//   return `Hello ${name}`;
-// };
+const impureFunction = () => {
+  return `Hello ${name}`;
+};
 
-// console.log(impureFunction());
+console.log(impureFunction());
 
-// // Changing values on the outside does not work when pure function
-// const changeStore = storeVar => {
-//   storeVar += " cool";
-//   return storeVar;
-// };
+// Changing values on the outside does not work when pure function
+const changeStore = storeVar => {
+  storeVar += " cool";
+  return storeVar;
+};
 
-// console.log(changeStore(store), " : ", store);
+console.log(changeStore(store), " : ", store);
 
 /**
  * Pure are easier to debug (find out what is wrong)
