@@ -63,6 +63,20 @@ const arrowFunction = paramter => {
 const arrowFunc = paramter => "Return Value";
 
 /**
+ * 
+ * 
+   ___                     __ _                  
+  |   \   __ _    _ _     / _` |   ___      _ _  
+  | |) | / _` |  | ' \    \__, |  / -_)    | '_| 
+  |___/  \__,_|  |_||_|   |___/   \___|   _|_|_  
+_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
+"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
+ * 
+ * Danger-Zone continue reading on your own risk :)
+ *  
+ */
+
+/**
  * Light Testing (Light Unit Testing)
  * *optional*
  */
@@ -126,8 +140,10 @@ const screamStuff = input => console.log(input.toUpperCase());
 screamStuff("Hello how are you!");
 
 (input => console.log(input.toUpperCase()))("Wow self invoked!");
+
 /**
  * Dependency Injection
+ * Very advanced topic
  */
 
 const jQuery = term => console.log("Whooo fancy ", term);
