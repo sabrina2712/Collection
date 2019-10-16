@@ -112,3 +112,42 @@ test(
 /**
  * testing *optional* END
  */
+
+/**
+ * Self-invoking Anonymous Functions (advanced)
+ * Super optional don't stress yourself :)
+ */
+
+const calc = (5 * 8) / (4 + 5);
+// 🤔 that could mean everything in parenthesis is considerate one thing?
+// yes!
+
+const screamStuff = input => console.log(input.toUpperCase());
+screamStuff("Hello how are you!");
+
+(input => console.log(input.toUpperCase()))("Wow self invoked!");
+/**
+ * Dependency Injection
+ */
+
+const jQuery = term => console.log("Whooo fancy ", term);
+let $ = jQuery;
+// Mootools
+const mooTools = term => console.log("Great term! ", term);
+
+$ = mooTools;
+var undefined = "Hahahahaha i hate you!!!!";
+
+// jQuery ($)
+(function($, undefined) {
+  $(".btn .btn-warning");
+})(jQuery);
+
+// mooTools ($)
+(function($) {
+  $(".message");
+})(mooTools);
+
+const log = console.log;
+
+log("Hi");
