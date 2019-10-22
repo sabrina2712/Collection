@@ -6,7 +6,7 @@
  * add(10)(5) -> 15
  *
  * Concept: Currying
- * - Clojure
+ * - Closure
  * - Scope
  */
 
