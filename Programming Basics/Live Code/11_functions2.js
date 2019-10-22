@@ -63,6 +63,20 @@ const arrowFunction = paramter => {
 const arrowFunc = paramter => "Return Value";
 
 /**
+ * 
+ * 
+   ___                     __ _                  
+  |   \   __ _    _ _     / _` |   ___      _ _  
+  | |) | / _` |  | ' \    \__, |  / -_)    | '_| 
+  |___/  \__,_|  |_||_|   |___/   \___|   _|_|_  
+_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
+"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
+ * 
+ * Danger-Zone continue reading on your own risk :)
+ *  
+ */
+
+/**
  * Light Testing (Light Unit Testing)
  * *optional*
  */
@@ -112,3 +126,44 @@ test(
 /**
  * testing *optional* END
  */
+
+/**
+ * Self-invoking Anonymous Functions (advanced)
+ * Super optional don't stress yourself :)
+ */
+
+const calc = (5 * 8) / (4 + 5);
+// 🤔 that could mean everything in parenthesis is considerate one thing?
+// yes!
+
+const screamStuff = input => console.log(input.toUpperCase());
+screamStuff("Hello how are you!");
+
+(input => console.log(input.toUpperCase()))("Wow self invoked!");
+
+/**
+ * Dependency Injection
+ * Very advanced topic
+ */
+
+const jQuery = term => console.log("Whooo fancy ", term);
+let $ = jQuery;
+// Mootools
+const mooTools = term => console.log("Great term! ", term);
+
+$ = mooTools;
+var undefined = "Hahahahaha i hate you!!!!";
+
+// jQuery ($)
+(function($, undefined) {
+  $(".btn .btn-warning");
+})(jQuery);
+
+// mooTools ($)
+(function($) {
+  $(".message");
+})(mooTools);
+
+const log = console.log;
+
+log("Hi");
