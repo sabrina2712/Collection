@@ -49,7 +49,8 @@ for example `<img />` or `<input />`: they are called `self closing elements`.
 
 ## Attributes
 
-HTML elements can have attributes. Attributes configure elements or adjust their behavior.
+HTML elements can have attributes. 
+Attributes configure elements or adjust their behavior.
 
 ```html
     <a href="http://duckduckgo.com" target="_blank">A Very Useful Link</p>
@@ -57,16 +58,27 @@ HTML elements can have attributes. Attributes configure elements or adjust their
  * Attributes like href           and target */
 ```
 
-Attributes have default values. You need to set the value
+Some attributes can be applied to all HTML elements
+(even though sometimes they might have no effect):
+they are called global. Classes and id-s are such attributes:
+
+```html
+    <p class="important-text">Lorem ipsum</p>
+```
+
+Check out the full list [on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes).
+
+Some attributes are specific to the element, like the `href` on an `a`, or the `src` on the `img`.
+
+Attributes have default values. This means, you need to set the value
 only if the new value is different than the default.
 
 ```html
     <a href="#bookmark-1" target="_self" />
 ```
 
-The `target` attribute has a default value of `_self`, so can omit it from the example above.
-
-Note, the `id` attribute requires its value to be unique for the entire document.
+The `target` attribute has a default value of `_self`, 
+so you can omit it from the example above.
 
 Usually, attributes have values (after the equal sign). But they don't have to!
 For example, `disabled` is also an attribute that can be used with `input` elements.
@@ -93,6 +105,8 @@ Some attributes though are needed for the element to work as expected.
 
 For example, if the `img` element is missing its `src` attribute,
 no image will be rendered.
+
+The `id` attribute requires its value to be unique for the entire document.
 
 ### Custom attributes
 
