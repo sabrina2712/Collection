@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border: 1px soli red;
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            /* width:600px; 
+            height: 100vh; */
+            justify-content: space-around;
+            height: 200px;
+            align-items: center;
+
+        }
+
+        li {
+            border: 2px solid yellow;
+            margin: .5em;
+            padding: .5em;
+            /* width:100%; */
+            /* flex-grow: 2;  */
+
+
+
+        }
+
+        .flex-one {
+            order: 2;
+            border: 3px dotted red;
+        }
+        .flex-two{
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="flex-one">one</li>
+        <li class="flex-two">two</li>
+        <li class="flex-three">three</li>
+        <li>four</li>
+        <li>five</li>
+
+
+    </ul>
+</body>
+
+</html>
