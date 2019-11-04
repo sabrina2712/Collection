@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  margin: 0;
+  /* padding-top: 100px; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  padding-bottom: 40px;
+}
+
+main {
+  display: flex;
+  height: 502px;
+}
+
+.slide {
+  flex-basis: 10%;
+  flex-grow: 1;
+  transition: 0.4s;
+  filter: grayscale(100%);
+  overflow: hidden;
+  display: flex;
+}
+
+.slide:hover {
+  flex-grow: 10;
+  filter: grayscale(0);
+}
+
+.slide {
+  display: flex;
+}
+
+.slide1 {
+  background: url("https://picsum.photos/700/501") center center no-repeat;
+  background-size: cover;
+}
+
+.slide2 {
+  background: url("https://picsum.photos/701/501") center center no-repeat;
+  background-size: cover;
+}
+
+.slide3 {
+  background: url("https://picsum.photos/702/501") center center no-repeat;
+  background-size: cover;
+}
+
+.slide4 {
+  background: url("https://picsum.photos/703/501") center center no-repeat;
+  background-size: cover;
+}
+
+.slide5 {
+  background: url("https://picsum.photos/704/501") center center no-repeat;
+  background-size: cover;
+}
+
+.slide6 {
+  background: url("https://picsum.photos/705/501") center center no-repeat;
+  background-size: cover;
+}
+
+h3 {
+  color: white;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  transform: translateY(500px);
+  transition: transform 0.5s 0s cubic-bezier(0.14, 0.85, 0.58, 1);
+  /* transition-timing-function: cubic-bezier(0.14, 0.85, 0.58, 1); */
+  transition-delay: 0s;
+  visibility: visible;
+  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.8);
+  /* overflow: hidden; */
+}
+
+.slide:hover h3 {
+  transform: translateY(368px);
+  transition-delay: 0.3s;
+  visibility: visible;
+  opacity: 1;
+}
