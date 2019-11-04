@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      main {
+        /* width: 100vw;
+        height: 100vh; */
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text {
+        font-size: 5em;
+        padding: 30px;
+      }
+
+      .container {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        border: red solid 1px;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+      }
+      .imageOne {
+        /* border: solid black; */
+        background-image: url("halloween-2905531_640.jpg");
+      }
+      .imageTwo {
+        /* border: solid blue; */
+        background-image: url("pumpkin-2736964_640.jpg");
+      }
+      .imageThree {
+        background-image: url("halloween-959049_640.jpg");
+      }
+      .imageFour {
+        background-image: url("sand-4492764_640.jpg");
+      }
+      .imageFive {
+        background-image: url("sand-4492764_640.jpg");
+      }
+
+      .item {
+        flex-grow: 1;
+        opacity: 0.4;
+        transition: all 0.5s;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .item:hover {
+        flex-grow: 2;
+        opacity: 1;
+        transition: all 0.5s;
+        z-index: 100;
+      }
+
+      .item div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        transform: scale(1);
+        transition: all 0.5s;
+      }
+
+      .item:hover div {
+        transform: scale(1.5);
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <!-- <section class="text">Slider</section> -->
+      <section class="container">
+        <div class="item">
+          <div class="imageOne">item 1</div>
+        </div>
+
+        <div class="item">
+          <div class="imageTwo">item 2</div>
+        </div>
+        <div class="item">
+          <div class="imageThree">item 3</div>
+        </div>
+        <div class="item">
+          <div class="imageFour">item 4</div>
+        </div>
+        <div class="item">
+          <div class="imageFive">item 5</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
