@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        nav {
+            border: 10px solid red;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightcoral;
+
+        }
+
+        nav li {
+            border: 2px solid green;
+            list-style: none;
+            position: relative;
+            padding: 1em 2em;
+            width: 300px;
+            text-align: center;
+        }
+
+        nav li ul {
+            /* border: 2px solid green; */
+
+            position: absolute;
+            left: 0; 
+            top: 100%;
+           
+            /* background-color: lightseagreen; */
+            transform: scaleY(0);
+            transform: scaleX(1);
+            opacity: 0;
+            /* visibility: hidden; */
+            transform-origin: top center;
+
+            transition: all .25s ease-in;
+        }
+
+        .main-container li:hover ul {
+            transform: scaleY(1);
+            opacity: 1;
+            /* visibility: visible; */
+            background-color: blueviolet;
+        }
+        .sub-container {
+            width: 100%;
+        }
+        .main-container .sub-container li {
+            width: 100%;
+        }
+        .main-container .sub-container li:hover {
+            background-color: gray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="main-container">
+
+        <li>
+            product
+        </li>
+
+        <li>company
+            <ul class="sub-container">
+                <li>Team</li>
+                <li>about us</li>
+                <li>motivation</li>
+            </ul>
+        </li>
+
+        <li>contact
+            <ul class="sub-container">
+                <li>Team</li>
+                <li>about us</li>
+                <li>motivation</li>
+            </ul>
+        </li>
+
+
+    </nav>
+</body>
+
+</html>
