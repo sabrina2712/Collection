@@ -32,3 +32,4 @@ You can also use Visual Code built in [version control features](https://code.vi
 
 * [Practical Git for Everyday Professional Use](https://egghead.io/courses/practical-git-for-everyday-professional-use)
 * [Octotree: GitHub on steroids](https://www.octotree.io/)
+* [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
