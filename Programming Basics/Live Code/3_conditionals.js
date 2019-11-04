@@ -41,8 +41,14 @@ if (true) {
 
 if (!"") console.log("String is falsy");
 if ("Hi") console.log("String with lenght bigger then 0 is truthy");
-if (0) console.log("is falsy");
+
+if (0) {
+  console.log("is falsy");
+} else {
+  console.log("check");
+}
 if (12) console.log("is truthy");
+
 if (-12) console.log("is truthy");
 if (undefined) console.log("is falsy");
 if (null) console.log("is falsy");
@@ -50,7 +56,7 @@ if (NaN) console.log("NaN is falsy");
 
 // ! is opposite true or false
 // !! convert to Boolean
-console.log("This is false", !!"string");
+console.log("This is false", !!NaN);
 
 /**
  * Read:

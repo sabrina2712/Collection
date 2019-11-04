@@ -62,7 +62,7 @@ console.log(Math.round(-1.99999));
 console.log(Math.round(1.05));
 
 // Infinit
-console.log(Math.pow(10000, 100) - Infinity);
+console.log(Math.pow(7, 2));
 
 /**
  * - Maximum and minimum with `Math.max()`, `Math.min()`
