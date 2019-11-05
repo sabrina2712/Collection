@@ -18,8 +18,8 @@ SubModules
   - [x] Recursion
 - Data Structure
   - [x] Object Intro
-  - [] **Object Scope**
-  - [] Array Intro
-  - [] Basic Array Methods
-  - [] Advanced Array Methods
+  - [ ] **Object Scope**
+  - [ ] Array Intro
+  - [ ] Basic Array Methods
+  - [ ] Advanced Array Methods
 - Error
