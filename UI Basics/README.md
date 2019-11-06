@@ -2,6 +2,7 @@
 
 * [HTML](./html.md)
 * [CSS](./css.md)
+* [Debugging your HTML and CSS](./debugging-html-css.md)
 
 ## Notes
 
