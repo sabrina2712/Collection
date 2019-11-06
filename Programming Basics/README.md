@@ -22,4 +22,8 @@ SubModules
   - [ ] Array Intro
   - [ ] Basic Array Methods
   - [ ] Advanced Array Methods
+  - [ ] Classes
 - Error
+  - [ ] Debugging (Node inspect and VS Code)
+  - [ ] Runtime errors
+  
