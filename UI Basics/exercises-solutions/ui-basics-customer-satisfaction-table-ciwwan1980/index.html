@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+
+        }
+
+
+        table {
+            /* background-color: lightblue; */
+            widows: 1000px;
+            height: 100vh;
+            margin: 300px auto;
+            border-collapse: collapse;
+
+
+        }
+
+
+        tr td {
+            /* border: 2px solid red; */
+            padding: 20px;
+            text-align: center;
+
+        }
+
+
+        img {
+
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .first-column {
+            border-bottom: 2px solid red;
+
+            background-color: lightblue;
+
+        }
+
+        h1 {
+            margin: 60px 0 0 30px;
+        }
+
+        tr {
+            border: none;
+            transition: .5s ease-in;
+
+        }
+
+        tr:hover {
+            background-color: lightblue;
+            /* transform: rotate(-45deg); */
+            background-color: #9370d8;
+            transition: all .2s ease-in-out;
+            transform: scale(1.1);
+        }
+
+
+        img:hover {
+            position: relative;
+            top: -15px;
+            left: -15px;
+            width: 100px;
+            height: auto;
+            display: block;
+            /* z-index: 1; */
+        }
+
+        tbody td:nth-child(7) {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+
+        /* section tr td {
+            position: sticky;
+            top: 0;
+            height: 500px;
+        } */
+
+    </style>
+
+</head>
+
+<body>
+    <main>
+
+        <table>
+            <td colspan="8">Customer Satisfaction</td>
+            <tbody>
+                <section>
+
+
+                    <tr class="first-column">
+                        <td> Select</td>
+                        <td>Avatar </td>
+                        <td>First Name </td>
+                        <td>last Name </td>
+                        <td> Nr -transaction</td>
+                        <td> Avergae duration</td>
+                        <td> average customer statisfaction</td>
+                        <td>Menu </td>
+                    </tr>
+                </section>
+
+                <tr>
+                    <td>++</td>
+                    <td><img src="https://robohash.org/VCU.png" width="60px"></td>
+                    <td>Marry </td>
+                    <td> Jean</td>
+                    <td> 453</td>
+                    <td> 2443</td>
+                    <td><img src="./images/0-20-happy.png" alt=""> 93%</td>
+                    <td> <a href="#">....</a></td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td><img src="https://robohash.org/CCC.png" width="60px"></td>
+                    <td>Marry </td>
+                    <td> Jean</td>
+                    <td> 453</td>
+                    <td> 2443</td>
+                    <td><img src="./images/0-20-happy.png" alt="">55%</td>
+                    <td> <a href="#">....</a></td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td><img src="https://robohash.org/M8F.png" width="60px"></td>
+                    <td>Marry </td>
+                    <td> Jean</td>
+                    <td> 453</td>
+                    <td> 2443</td>
+                    <td><img src="./images/0-20-happy.png" alt="">70%</td>
+                    <td> <a href="#">....</a></td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td><img src="https://robohash.org/B5D.png" width="60px"></td>
+                    <td>Marry </td>
+                    <td> Jean</td>
+                    <td> 453</td>
+                    <td> 2443</td>
+                    <td><img src="./images/0-20-happy.png" alt="">90%</td>
+                    <td> <a href="#">....</a></td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td><img src="https://robohash.org/C6Z.png" width="60px"></td>
+                    <td>Marry </td>
+                    <td> Jean</td>
+                    <td> 453</td>
+                    <td> 2443</td>
+                    <td><img src="./images/0-20-happy.png" alt="">30%</td>
+                    <td> <a href="#">....</a></td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td><img src="https://robohash.org/Z8Z.png" width="60px"></td>
+                    <td>Marry </td>
+                    <td> Jean</td>
+                    <td> 453</td>
+                    <td> 2443</td>
+                    <td><img src="./images/0-20-happy.png" alt="">45%</td>
+                    <td> <a href="#">....</a></td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td><img src="https://robohash.org/A5L.png" width="60px"></td>
+                    <td>Marry </td>
+                    <td> Jean</td>
+                    <td> 453</td>
+                    <td> 2443</td>
+                    <td><img src="./images/0-20-happy.png" alt="">86%</td>
+                    <td> <a href="#">....</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+</body>
+
+</html>

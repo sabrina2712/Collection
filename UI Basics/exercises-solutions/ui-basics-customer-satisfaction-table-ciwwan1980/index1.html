@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        div {
+            margin: 300px auto;
+        }
+
+        .hover_img a {
+            position: relative;
+        }
+
+        .hover_img a span {
+            position: absolute;
+            display: none;
+            z-index: 99;
+        }
+
+        .hover_img a:hover span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hover_img">
+        <a href="#">A picture of my face<span><img src="./images/61-80-happy.png" /></span></a>
+</body>
+
+</html>
