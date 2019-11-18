@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Form 2.0</title>
+</head>
+
+<body>
+    <header>
+        <a href="#">Logo</a>
+    </header>
+
+    <section class="page">
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt fugit sint quos distinctio
+                assumenda aut suscipit culpa aperiam quasi dolorum maiores incidunt nulla tempore atque soluta
+                quibusdam, doloremque dolore.
+            </p>
+        </div>
+    </section>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio totam excepturi recusandae iure molestiae maxime
+        similique voluptates quidem beatae officia quasi accusamus dicta iste, reiciendis at, minima ipsa. Eius,
+        voluptatum!
+    </p>
+
+    <form action="#" id="my-form">
+        <!-- 
+            Few important things to remember about forms:
+
+            1. link label to input
+                - id on the input and for on the label (same value)
+                - wrap the input inside a label (no need for id and for linking)
+            
+            2. (must) use name to submit data
+
+            3. buttons go inside the form or must link them via the form attribute
+
+            4. group radio and checkboxes by name attribute
+
+            5. give values to radios and checkboxes (since user cannot enter any value, you must add these in your HTML)
+
+            * set a form method, if not the default is GET
+         -->
+
+        <!-- 
+
+            When the form is submitted with the GET method
+            query parameters will be added to the URL like so:
+
+            http://localhost:8082/?
+                one-choice=on&
+                second-one-choice=on&
+                multi-choice=paypal&
+                multi-choice=credit&
+                fistName=dfghjk&
+                fistName=ghjkl
+                #
+
+            All query params are separated with ? from the URL.
+            The names you give to your inputs will be used as keys,
+            and the input values will be used as values.
+            
+            fistName=dfghjk&
+            firstName is the name used for the input
+            dfghjk is what the user entered
+
+          -->
+
+        <fieldset>
+            <legend>Personal data</legend>
+
+            <!-- You can nest fieldsets -->
+            <fieldset>
+                <legend>One Choice</legend>
+
+                <label for="option-1">Option 1</label>
+                <!-- You can use the checked attribute to preselect a radio or checkbox  -->
+                <input type="radio" id="option-1" name="one-choice" checked>
+
+                <label for="option-2">Option 2</label>
+                <input type="radio" id="option-2" name="one-choice">
+            </fieldset>
+
+            <fieldset>
+                <legend>One Choice</legend>
+
+                <label for="option-1">Option 1</label>
+                <input type="radio" id="option-1" name="second-one-choice">
+
+                <label for="option-2">Option 2</label>
+                <input type="radio" id="option-2" name="second-one-choice" checked>
+            </fieldset>
+
+            <fieldset>
+                <legend>Multi choice</legend>
+
+                <label for="option-1">Option 1</label>
+                <input type="checkbox" id="option-1" name="multi-choice" value="paypal" checked>
+
+                <label for="option-2">Option 2</label>
+                <input type="checkbox" id="option-2" name="multi-choice" value="credit" checked>
+            </fieldset>
+        </fieldset>
+
+        <div class="form-field">
+            <label for="name">Form label</label>
+            <input type="text" id="name" name="fistName">
+        </div>
+
+        <!-- 
+            You can wrap a set of input and its label
+            in another element and give them a class
+        -->
+        <div class="form-field">
+            <label>
+                <span>Form label</span>
+                <input type="text" name="fistName">
+            </label>
+        </div>
+
+        <div class="form-field">
+            <label>
+                <span>Upload a file</span>
+                <input type="file" name="fistName">
+            </label>
+        </div>
+
+        <fieldset>
+            <legend>Select one:</legend>
+
+            <div class="radio">
+                <input type="radio" name="marital-status" value="choice 1000" class="radio-input" id="opt-1">
+
+                <label class="radio-label" for="opt-1">Choice 10000</label>
+            </div>
+
+            <label class="radio">
+                <input type="radio" name="marital-status" value="choice 1" class="radio-input" id="choice1">
+                <span class="radio-label">Choice 1</span>
+            </label>
+
+            <label class="radio">
+                <input type="radio" name="marital-status" value="choice 2" class="radio-input">
+                <span class="radio-label">Choice 2</span>
+            </label>
+
+            <label class="radio">
+                <input type="radio" name="marital-status" value="choice 3" class="radio-input">
+                <span class="radio-label">Choice 3</span>
+            </label>
+
+            <label class="radio">
+                <input type="radio" name="marital-status" value="choice 4" class="radio-input">
+                <span class="radio-label">Choice 4</span>
+            </label>
+        </fieldset>
+
+        <!-- The button with type reset will clear the form -->
+        <button type="reset">Cancel</button>
+        <!-- Buttons are default are of type submit -->
+        <button>Send form</button>
+    </form>
+
+    <!--
+        Buttons that are outside the form
+        must be linked to a form with the form attribute.
+        The value of the form attribute
+        is the id of the form that you want to link to.
+     -->
+    <button type="reset" form="my-form">Cancel</button>
+    <button form="my-form">Send form</button>
+</body>
+</html>
