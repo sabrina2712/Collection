@@ -1,0 +1,89 @@
+.grid {
+    /* 
+    Many possible values for the display property:
+
+    block
+    inline
+    inline-block
+    table
+    flex
+    grid
+     */
+
+    display: grid;
+
+    /* Explicit grid */
+    grid-template-columns: 2fr 1fr 100px 100px;
+    /* We could use the function repeat(count, size) to define the columns */
+    grid-template-columns: repeat(10, 1fr);
+
+    grid-template-rows: 100px 100px 100px;
+
+    /* Gap */
+    /* Longhand */
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    /* Shorthand */
+    /* The next line overwrites the previous 2 lines */
+    /* You can always go in the dev tools and inspect this property */
+    grid-gap: 10px 30px;
+
+    /* Implicit grid */
+    /* 
+        When there are more items than columns and rows
+        or we try to place items on a lines that are outside of our explicit grid
+        the grid layout will create automatically more rows as we need
+        The size of these new rows or columns
+        will be the content unless we specify the size with
+        grid-auto-rows or grid-auto-columns
+    */
+    grid-auto-rows: 100px;
+
+    /* We could center the container like we used */
+    /* max-width: 700px;
+    margin: 0 auto; */
+
+    /*
+        The grid we created might not have the same size as the entire container
+        Add background to see
+    */
+    /* background-color: darkgoldenrod; */
+}
+
+.grid.grid-auto-columns {
+    grid-template-columns: 1fr 1fr;
+    /*
+        by default it is row, we can change it to column
+    */
+    grid-auto-flow: column; 
+    grid-auto-columns: 30px;
+}
+
+div {
+    background-color: pink;
+    border: 1px solid white;
+    padding: 50px;
+    /* If size is too small we can even add scrolling */
+    overflow: scroll;
+    
+}
+
+div:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: -1;
+
+    grid-row-start: 2;
+    grid-row-end: -1;
+}
+
+/* grid elements not influenced */
+/* 
+    box-sizing: border-box;
+*/
+
+/* Regular boxes still are */
+/* 
+.box-test {
+    width: 100px;
+    padding: 20px;
+} */
