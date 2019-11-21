@@ -627,6 +627,10 @@ If there are more grid items than cells in the grid or when a grid item is place
 
 Chrome, Firefox and Safari shipped grid support in March 2017. Edge shipped support in October 2017. IE10, 11 and Edge 15 and lower support an older, prefixed spec.
 
+## CSS Grid inspector
+
+Firefox has an awesome Grid inspector, you can read more about it [here](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts).
+
 ## Resources
 
 * [Grid Garden](https://cssgridgarden.com/)
