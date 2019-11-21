@@ -544,6 +544,98 @@ Generally, the content of a block box is confined to the content edges of the bo
 * [Flexbox Froggy](https://flexboxfroggy.com/)
 * [The Difference Between Width and Flex Basis](https://gedd.ski/post/the-difference-between-width-and-flex-basis/)
 
+# CSS Grid layout
+
+# CSS Grid Layout (aka "Grid")
+
+Grid Layout gives us a method of creating grid structures that are described in CSS and not in HTML. It helps us to create layouts that can be redefined using Media Queries and adapt to different contexts.
+
+Unlike with an HTML table-based layout, you can layer items on the grid. So one item can overlap another if required.
+
+Grid Layout finally gives us the ability to define grids in CSS and place items into grid cells. This on its own is great, but the fact that we don't have to specify each track and we don't have to place every item manually makes the new module even better. Grids are flexible enough to adapt to their items.
+
+## Flexbox or grid?
+
+[Email from Tab Atkins Jr.:](http://lists.w3.org/Archives/Public/www-style/2013May/0114.html)
+
+Flexbox is for one-dimensional layouts - anything that needs to be laid out in a straight line (or in a broken line, which would be a single straight line if they were joined back together). Grid is for two-dimensional layouts. It can be used as a low-powered flexbox substitute (we’re trying to make sure that a single-column/row grid acts very similar to a flexbox), but that’s not using its full power.
+
+## Grid terminology
+
+**Grid Lines** are the lines that make up the grid. These can be horizontal or vertical. We can refer to them by number, or by name.
+
+A **Grid Track** is the space between two Grid Lines, either horizontal or vertical.
+
+A **Grid Cell** is the space between 4 Grid Lines. So it is the smallest unit on our grid that is available for us to place an item into. Conceptually it is just like a table cell.
+
+A **Grid Area** is any area on the Grid bound by four grid lines. It may contain a number of Grid Cells.
+
+2 axes:
+* block (column) axis 
+* inline (row) axis
+
+> Note: float, display: inline-block, display: table-cell, vertical-align and column-* properties have no effect on a grid item.
+
+## Usage
+
+### Using `fr` with grid
+
+The free space is calculated after any non-flexible items. In this example the total amount of free space available to the `fr` units doesn't include the 50px:
+
+```css
+.container {
+  grid-template-columns: 1fr 50px 1fr 1fr;
+}
+```
+
+### Gaps
+
+`grid-column-gap`, `grid-row-gap`: The gutters are only created between the columns/rows, not on the outer edges.
+
+Default value is `normal` (no space between items).
+
+`grid-gap`: 
+
+```css
+.container {
+  grid-gap: <grid-row-gap> <grid-column-gap>;
+}
+```
+
+If no `grid-row-gap` is specified, it's set to the same value as `grid-column-gap`.
+
+### Aligning items
+
+`justify-items`: position horizontall in the cell
+`align-items`: position vertically in the cell
+
+## Aligning all the grid contents
+
+`justify-content`: positions horizontally within the grid container
+`align-content`: positions vertically within the grid container
+
+## Implicit grid
+
+Implicit tracks get created when there are more grid items than cells in the grid or when a grid item is placed outside of the explicit grid.
+
+Specifies the size of any auto-generated grid tracks (aka implicit grid tracks):
+
+* `grid-auto-columns`
+* `grid-auto-rows`
+
+If there are more grid items than cells in the grid or when a grid item is placed outside of the explicit grid, the grid container automatically generates grid tracks by adding grid lines to the grid. The explicit grid together with these additional implicit tracks and lines forms the so called implicit grid.
+
+## Broswer support
+
+Chrome, Firefox and Safari shipped grid support in March 2017. Edge shipped support in October 2017. IE10, 11 and Edge 15 and lower support an older, prefixed spec.
+
+## Resources
+
+* [Grid Garden](https://cssgridgarden.com/)
+* [Learn CSS Grid - A Guide to Learning CSS Grid](https://learncssgrid.com/)
+* [CSS Grid — Learn all about CSS Grid with Wes Bos](https://cssgrid.io/)
+* [Grid by example](https://gridbyexample.com)
+
 # Resources
 
 * [When does white space matter in HTML?](https://patrickbrosset.com/articles/2016-10-21-when-does-white-space-matter-in-HTML.html)
