@@ -544,8 +544,6 @@ Generally, the content of a block box is confined to the content edges of the bo
 * [Flexbox Froggy](https://flexboxfroggy.com/)
 * [The Difference Between Width and Flex Basis](https://gedd.ski/post/the-difference-between-width-and-flex-basis/)
 
-# CSS Grid layout
-
 # CSS Grid Layout (aka "Grid")
 
 Grid Layout gives us a method of creating grid structures that are described in CSS and not in HTML. It helps us to create layouts that can be redefined using Media Queries and adapt to different contexts.
