@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+    padding: 20px;
+}
+
+.form-field {
+    margin-bottom: 32px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    user-select: none;
+    color: #444;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea {
+    padding: 8px;
+}
+
+fieldset label {
+    display: inline-block;
+}
+
+textarea {
+    /* Overwritng the cols attribute here */
+    width: 100%;
+}
+
+/* We need to hide the actual input field */
+input[type="radio"] {
+    position: absolute;
+    /* You probably won't need all this to hide */
+    /* width: 0;
+    height: 0;
+    left: -999px; */
+    opacity: 0;
+    visibility: hidden;
+}
+
+.radio-button {
+    margin-right: 30px;
+}
+
+.radio-button-label {
+    position: relative;
+    padding-left: 40px;
+}
+
+.radio-button-label:hover {
+    cursor: pointer;
+}
+
+/* Use pseudo element to create a shape that 
+will be the radio or checkbox */
+.radio-button-label::before,
+.radio-button-label::after {
+    position: absolute;
+    z-index: 1;
+    top: 6px;
+    left: 6px;
+
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    content: '';
+
+    transition: all 0.3s;
+}
+
+.radio-button-label::before {
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+input[type="radio"]:checked + .radio-button-label::after {
+    background-color: black;
+}

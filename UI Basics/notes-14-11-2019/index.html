@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Forms</title>
+</head>
+
+<body>
+    <section>
+        <!-- 
+            Values we can specify for the method form attribute
+            (there are others, but for now these 2 are enough):
+
+            GET
+            POST
+
+         -->
+
+
+        <!-- 
+
+            On form submission with form attribute specified to GET:
+
+            http://localhost:8080/?
+                first-name=DFGhj
+                &
+                last-name=HGJdsfsdfsdf
+
+            http://localhost:8080/?
+                first-name=Rsdfghjkl%C3%B6
+                &
+                last-name=Tdfghjkl#
+
+            http://localhost:8080/?
+                firstName=FGHj
+                &
+                lastName=fghjk#
+
+            http://localhost:8080/?lastName=fghjk#
+
+            http://localhost:8080/?
+                firstName=&
+                lastName=&
+                userPassword=&
+                userAge=&
+                choices=option-1#
+
+            http://localhost:8080/?firstName=&lastName=&userPassword=&userAge=&select-options=option-1&
+            message=asdadasdada%0D%0A%0D%0A%0D%0A%0D%0A%0D%0Asadasd%0D%0A%0D%0Aasdads%0D%0Aa%0D%0A%0D%0Aadada%0D%0A%0D%0A%0D%0A%0D%0A%0D%0Aadada%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0Aadadadada%0D%0A%0D%0A%0D%0A%0D%0A%0D%0Asdsd#
+        -->
+
+        <form action="#" method="GET">
+            <div class="form-field">
+                <label for="first-name">First Name</label>
+                <input type="text" name="firstName" id="first-name" required>
+            </div>
+
+            <div class="form-field">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="lastName" id="last-name" readonly>
+            </div>
+
+            <div class="form-field">
+                <label for="user-password">Password</label>
+                <input type="password" name="userPassword" id="user-password">
+            </div>
+
+            <div class="form-field">
+                <label for="user-age">Age</label>
+                <input type="number" name="userAge" id="user-age" min="18" max="20">
+            </div>
+
+            <!-- Checkboxes -->
+            <!-- <fieldset class="form-field">
+                <legend>Question 1</legend>
+                <label for="option-1">Option 1</label>
+                <input type="checkbox" name="choices" value="option-1">
+
+                <label for="option-2">Option 2</label>
+                <input type="checkbox" name="choices" value="option-2">
+
+                <label for="option-3">Option 3</label>
+                <input type="checkbox" name="choices" value="option-3">
+            </fieldset> -->
+
+            <!-- Radio buttons -->
+            <!-- 
+                <fieldset class="form-field">
+                    <legend>Question 2</legend>
+                    <label for="option-1">Option 1</label>
+                    <input type="radio" name="other-choices" value="option-1" id="option-1">
+
+                    <label for="option-2">Option 2</label>
+                    <input type="radio" name="other-choices" value="option-2" id="option-2">
+
+                    <label for="option-3">Option 3</label>
+                    <input type="radio" name="other-choices" value="option-3" id="option-3">
+                </fieldset>
+            -->
+            <fieldset class="form-field">
+                <legend>Question 2</legend>
+
+                <label class="radio-button">
+                    <input type="radio" name="other-choices" value="option-1">
+                    <span class="radio-button-label"> Option 1</span>
+                </label>
+
+                <label class="radio-button">
+                    <input type="radio" name="other-choices" value="option-2">
+                    <span class="radio-button-label">
+                        Option 2
+                    </span>
+                </label>
+
+                <label class="radio-button">
+                    <input type="radio" name="other-choices" value="option-3">
+                    <span class="radio-button-label">
+                        Option 3
+                    </span>
+                </label>
+            </fieldset>
+
+            <div class="form-field">
+                <label for="select-options">Select Options</label>
+                <select name="select-options" id="select-options">
+                    <option value="option-1">Option 1</option>
+                    <option value="option-2">Option 2</option>
+                    <option value="option-3">Option 3</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="message">Send me a message</label>
+                <textarea name="message" id="message" rows="5"></textarea>
+            </div>
+
+            <div>
+                <button type="reset">Cancel</button>
+                <button>Submit</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
