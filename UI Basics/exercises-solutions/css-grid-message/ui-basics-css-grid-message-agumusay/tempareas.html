@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class=preIE7 preIE8 preIE9><![endif]-->
+<!--[if IE 7]><html class=preIE8 preIE9><![endif]-->
+<!--[if IE 8]><html class=preIE9><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+  <head>
+    <meta charset=UTF-8>
+  <meta http-equiv=X-UA-Compatible content=IE=edge,chrome=1>
+  <meta name=viewport content=width=device-width,initial-scale=1>
+    <title>title</title>
+  <meta name=author content=name>
+  <meta name=description content=description here>
+  <meta name=keywords content=keywords,here>
+  <link rel=stylesheet href=/css/normalize.css type=text/css>
+  <link rel=stylesheet href=/css/tempareas.css type=text/css>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,500,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <main>
+    <div class="box" id="c">
+      <p>c</p>
+    </div>
+    <div class="box" id="s1">
+      <p>s</p>
+    </div>
+    <div class="box" id="s2">
+      <p>s</p>
+    </div>
+    <div class="box-empty-1"></div>
+    <div class="box" id="g">
+      <p>g</p>
+    </div>
+    <div class="box" id="r">
+      <p>r</p>
+    </div>
+    <div class="box" id="i1">
+      <p>i</p>
+    </div>
+    <div class="box" id="d">
+      <p>d</p>
+    </div>
+    <div class="box-empty-2"></div>
+    <div class="box" id="i2">
+      <p>i</p>
+    </div>
+    <div class="box" id="s3">
+      <p>s</p>
+    </div>
+    <div class="box-empty-3"></div>
+    <div class="box" id="a">
+      <p>a</p>
+    </div>
+    <div class="box" id="w">
+      <p>w</p>
+    </div>
+    <div class="box" id="e1">
+      <p>e</p>
+    </div>
+    <div class="box" id="s4">
+      <p>s</p>
+    </div>
+    <div class="box" id="o">
+      <p>o</p>
+    </div>
+    <div class="box" id="m">
+      <p>m</p>
+    </div>
+    <div class="box" id="e2">
+      <p>e</p>
+    </div>
+  </main>
+  
+  <script>
+  const elements = document.getElementsByClassName('box');
+
+for (let i = 0; i <= elements.length; i++) {
+	elements[i].addEventListener('animationend', function(e) {
+    elements[i].classList.remove('animated');
+	});
+
+  elements[i].addEventListener('mouseover', function(e) {
+    elements[i].classList.add('animated')
+  })
+}
+  </script>
+  
+</body>
+</html>
