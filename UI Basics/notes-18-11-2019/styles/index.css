@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page {
+    min-height: 4vh;
+    /* 
+        If we set the background,
+        you can see that the content is overflowing
+        once there is no more space
+    */
+    /* background-color: mistyrose; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    /*
+        Avoid using fixed height
+        but also avoid using height set as % or vh:
+        screen sizes vary, and you might end up with 
+        unexpected results
+    */
+    /* height: 3vh; */
+    padding: 30px;
+}
+
+/* Form */
+.form-field label,
+.form-field label span {
+    display: block;
+    margin-bottom: 8px;
+    /* margin-bottom: 32px; */
+}
+
+.form-field input {
+    margin-bottom: 8px;
+}
+
+.form-field {
+    margin-bottom: 16px;
+}
+
+form {
+    border: 1px solid gray;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Custom radio button */
+/* 
+1. Hide the default input field and take it out of the flow so no space is reserved for it
+2. Create a fake radio or checkbox shape with pseudo elements (::before and ::after)
+3. Position the pseudo element on top of each other, to the left of the widget
+4. Create 2 styles - one for selected, one for deselected
+5. Target the checked inputs with the pseudo class :checked
+6. Use the sibling selector (+ or ~) to select the label which follows after it 
+    It is important the order of your elements in your HTML: the label must follow the input
+*/
+.radio {
+    display: inline-block;
+    border: 1px solid gray;
+}
+
+.radio-label {
+    position: relative;
+    display: block;
+    /* min-height: 30px; */
+    padding: 30px 30px 30px 60px;
+    font-size: 12px;
+}
+
+.radio-label::before,
+.radio-label::after {
+    position: absolute;
+    top: 0;
+    left: 23px;
+    bottom: 0;
+    margin: auto;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background-color: rebeccapurple;
+    content: '';
+}
+
+.radio-label::before {
+    left: 16px;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+    border: 2px solid rebeccapurple;
+}
+
+.radio-label::after {
+    opacity: 0;
+
+    /* Fade in and out transition duration */
+    transition: 0s;
+}
+
+.radio-input {
+    /* out of the flow, no space reserved */
+    position: absolute;
+
+    /* hide */
+    visibility: hidden;
+    opacity: 0;
+    left: -999px;
+}
+
+.radio-input:checked + .radio-label {
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+.radio-input:checked + .radio-label::after {
+    opacity: 1;
+
+    /* Fade in transition duration overwriting the general rule */
+    transition: 3s;
+}

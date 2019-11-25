@@ -1,0 +1,66 @@
+:root {
+    --default-padding: 10px;
+}
+body {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(auto, 200px) auto auto;
+    grid-template-areas: 
+        "site-header site-header site-header"
+        "sidebar main main"
+        "foo foo foo";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: site-header;
+    padding: var(--default-padding);
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+        "logo navigation";
+    align-items: center;
+}
+
+header a {
+    grid-area: logo;
+    padding: var(--default-padding);
+}
+
+header nav {
+    grid-area: navigation;
+    justify-self: end;
+}
+
+aside {
+    grid-area: sidebar;
+    padding: var(--default-padding);
+    background-color: silver;
+}
+
+main {
+    grid-area: main;
+    padding: calc(var(--default-padding) * 10);
+}
+
+footer {
+    grid-area: foo;
+    padding: var(--default-padding);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}

@@ -302,3 +302,154 @@ in Save window.
 For certain file types, like `pdf` for example, browsers have built in previewers
 that also have a button to download the file,
 so there might be no need to add the `download` attribute.
+
+## Form
+
+The HTML `<form>` element represents a document section that contains interactive controls for submitting information to a web server.
+
+Many assistive technologies and browser plugins can discover `<form>` elements and implement special hooks to make them easier to use.
+
+> Note: `<form>` cannot contain another `<form>`. It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave in an unpredictable manner based on the browser that is being used.
+
+### Attributes
+
+* **action**
+
+The URI of a program that processes the form information.
+If you dont have a URI to add, you can add `#` instead.
+
+* **method**
+
+The HTTP method that the browser uses to submit the form. Possible values are:
+
+* get: Corresponds to the HTTP GET method; form data are appended to the action attribute URI with a '?' as separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
+* post: Corresponds to the HTTP POST method ; form data are included in the body of the form and sent to the server. You can use the Network pannel in your dev tools to see the request body.
+
+* target
+  A name or keyword indicating where to display the response that is received after submitting the form.
+
+It's common practice to wrap a label and its widget with a <div> element. <p> elements and HTML lists are also commonly used, with lists used for structuring multiple checkboxes or radio buttons.
+
+Each separate section of functionality should be contained in a separate <section> element, with <fieldset> elements to contain radio buttons.
+
+## Form elements
+
+### <fieldset>
+
+The <fieldset> element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes.
+
+Because of its influence over assistive technology, the <fieldset> element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to listen to how a screen reader interprets it. If it sounds odd, try to improve the form structure.
+
+### <label>
+
+Labels can be clicked to focus their corresponding input field. In order to do this, you will need:
+
+* to add an `id` to the input field
+* to add a `for` attribute to the `label`.
+
+The value of the `for` on `label` and the value of the `id` on the input field should be the same.
+
+Another approach would be to nest inputs inside a `label` element. Then you will need to remove the `for` attribute on the `label`.
+
+A screen reader will speak an asterisk as "star"  when encountered. When hovered my a sighted mouse user, "required" should appear. Titles being read aloud depend on the screen reader's settings. For this reason, we include the `aria-label` attribute, which is read by screen readers.
+
+### <input>
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+
+Attributes, to name a few:
+name, disabled, multiple,required, readonly, placeholder, pattern, minlength, maxlength, min, max, checked.
+
+Examples:
+
+```html
+<label for="user-name">Name:</label>
+<input type="text" name="userName" id="user-name">
+
+<label for="user-age">Age:</label>
+<input type="number" name="userAge" id="user-age">
+
+<label for="user-email">Email:</label>
+<input type="email" name="userEmail" id="user-email">
+```
+
+> using placeholder for label -> bad practice
+> autofocus: Warning: Automatically focusing a form control can confuse visually-impaired people using screen-reading technology and people with cognitive impairments. When autofocus is assigned, screen-readers "teleport" their user to the form control without warning them beforehand.
+
+#### Name
+
+Consider the name a required attribute (even though it's not). If an input has no name  specified, or name is empty, the input's value is not submitted with the form. (Disabled controls, unchecked radio buttons, unchecked checkboxes, and reset buttons are also not sent.)
+
+The name attribute creates a **unique behavior for radio buttons**.
+
+Only one radio button in a same-named group of radio buttons can be checked at a time. Selecting any radio button in that group automatically deselects any currently-selected radio button in the same group. The value of that one checked radio button is sent along with the name if the form is submitted,
+
+#### readonly
+
+The difference between disabled and readonly is that read-only controls can still function, whereas disabled controls are not submitted with the form and generally do not function as controls until they are enabled.
+
+> Cannot use required with readonly.
+
+## Textarea
+
+Can be used for longer text, you can use `cols` and `rows` attributes to define the size of the textarea.
+
+```html
+<label for="message">Message:</label>
+<textarea cols="10" rows="10" id="message">
+```
+
+## Radio buttons and checkboxes
+
+Users cannot type into radio buttons and checkboxes, so we need to manually provide a value for them in our HTML.
+
+```html
+<label for="radio-option-1">Radio Option 1</label>
+<input type="radio" name="options" value="radio-option-1 id="radio-option-1">
+
+<label for="radio-option-2">Radio Option 2</label>
+<input type="radio" name="options" value="radio-option-2 id="radio-option-2">
+```
+
+`name` is important when it comes to radio buttons and checkboxes, as it groups them together.
+
+## Select and option
+
+`select` also needs us to add manually values to each `option` included within the `select` element.
+
+```html
+<label for="select-options">Select an option</label>
+<select id="select-options">
+    <option value="option-1">Option 1</option>
+    <option value="option-2">Option 2</option>
+    <option value="option-3">Option 3</option>
+</select>
+```
+
+## Custom form styles
+
+You add custom styles to the form elements with the help of the adjacent sibling selector `+` and pseudo elements.
+
+```css  
+input + .label {}
+input ~ .label {}
+```
+
+This way you can select elements that are siblings.
+It is important to note that the element with the class `.label`
+comes after the `<input>` element in your HTML.
+
+## Form validation
+
+There is default HTML5 validation.
+You can specify a form field as `required`. When you try to submit the form without filling this field in, the submission will not go through and a message will apear indicating the field cannot be empty.
+
+Read more on validation [here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation).
+
+It is possible to use the `:valid` and `:invalid` CSS pseudo-classes to style a `<form>` element based on whether or not the individual elements within the form are valid.
+
+## Form submission
+
+To submit a form you will need a `<button>` element or an input with type submit `<input type="submit">`.
+
+`<button>` elements by default are of type submit. If you want to add another button, that instead cancels the form or clears it you can use `<button type="button">` or `<button type="reset">`.
