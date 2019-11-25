@@ -1,0 +1,265 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.5rem;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    
+}
+
+main{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    display: grid;
+    width: 90%;
+    height: 22%;
+    grid-gap: 5px 5px;
+    grid-template-areas: 
+    "c s ss ema ema ema ema ema ema ema"
+    "g r i d emb emb emb emb emb emb"
+    "ii sss emc emc emc emc emc emc emc emc"
+    "a w e ssss o m ee .. .. .." ;
+    
+    
+}
+
+div{
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 4px inset white,
+    1px 1px 0px darkmagenta,
+    2px 2px 0px darkmagenta,
+    0px 5px 20px rgba(0, 0, 0, 0.582);
+    border-radius: 2px;
+    
+}
+
+p{
+    color: white;
+    font-weight: bold;
+    font-size: 4vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 1px 1px 0px rgb(68, 68, 68);
+}
+
+#c{
+    grid-area: c;
+}
+
+#s1{
+    grid-area: s;
+}
+
+#s2{
+    grid-area: ss;
+}
+
+#g{
+    grid-area: g;
+}
+
+#r{
+    grid-area: r;
+}
+
+#i1{
+    grid-area: i;
+}
+
+#d{
+    grid-area: d;
+}
+
+#i2{
+    grid-area: ii;
+}
+
+#s3{
+    grid-area: sss;
+}
+
+#a{
+    grid-area: a;
+}
+
+#w{
+    grid-area: w;
+}
+
+#e1{
+    grid-area: e;
+}
+
+#s4{
+    grid-area: ssss;
+}
+
+#o{
+    grid-area: o;
+}
+
+#m{
+    grid-area: m;
+}
+
+#e2{
+    grid-area: ee;
+}
+.box-empty-1{
+  grid-area: ema;
+  
+}
+.box-empty-2{
+    grid-area: emb;
+    
+}
+
+.box-empty-3{
+    grid-area: emc;
+    
+}
+
+
+
+@media screen and (min-width: 568px) {
+    main{
+         grid-template-areas: 
+    "c s ss ema ema ema ema ema ema ema"
+    "g r i d emb emb emb emb emb emb"
+    "ii sss emc emc emc emc emc emc emc emc"
+    "a w e ssss o m ee . . ." ;
+    }
+
+    div{
+        box-shadow: 0px 0px 4px inset white,
+        1px 1px 0px darkmagenta,
+        2px 2px 0px darkmagenta,
+        3px 3px 0px darkmagenta,
+        0px 5px 20px rgba(0, 0, 0, 0.582);
+        border-radius: 4px;
+    }
+
+    p{
+        text-shadow: 1px 1px 0px rgb(68, 68, 68),
+        2px 2px 0px rgb(68, 68, 68);
+        
+    }
+ }
+
+ @media screen and (min-width: 768px) {
+    main{
+        grid-template-areas: 
+   "c s ss ema ema ema ema ema ema ema"
+   "g r i d emb emb ii sss emc emc"
+   "a w e ssss o m ee . . ." ;
+   }
+    div{
+        box-shadow: 0px 0px 4px inset white,
+        1px 1px 0px darkmagenta,
+        2px 2px 0px darkmagenta,
+        3px 3px 0px darkmagenta,
+        4px 4px 0px darkmagenta,
+        0px 5px 20px rgba(0, 0, 0, 0.582);;
+        border-radius: 8px;
+    }
+
+    p{
+        text-shadow: 1px 1px 0px rgb(68, 68, 68),
+        2px 2px 0px rgb(68, 68, 68);
+        
+    }
+
+      .box-empty-2{
+          grid-column: 5 / span 2;
+      }
+      
+      .box-empty-3{
+          grid-column: 9 / span 2;
+      }
+ }
+
+ @media screen and (min-width: 1200px) {
+    main{
+        grid-template-areas: 
+   "c s ss ema g r i d emb emb"
+   "ii sss emc a w e ssss o m ee";
+   }
+
+    div{
+        box-shadow: 0px 0px 4px inset white,
+        1px 1px 0px darkmagenta,
+        2px 2px 0px darkmagenta,
+        3px 3px 0px darkmagenta,
+        4px 4px 0px darkmagenta,
+        0px 5px 20px rgba(0, 0, 0, 0.582);
+        border-radius: 4px;
+    }
+
+    p{
+        text-shadow: 1px 1px 0px rgb(68, 68, 68),
+        2px 2px 0px rgb(68, 68, 68),
+        3px 3px 0px rgb(68, 68, 68);
+        font-size: 6vh;
+    }
+    .box-empty-1{
+        grid-column: 4;
+    }
+      .box-empty-2{
+          grid-column: 9 / span 2;
+      }
+      
+      .box-empty-3{
+          grid-column: 3;
+      }
+ }
+
+ @keyframes rubberBand {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, .95, 1);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  .box.animated { 
+    -moz-animation: rubberBand 1s;
+    -webkit-animation: rubberBand 1s;
+    animation: rubberBand 1s;
+}
