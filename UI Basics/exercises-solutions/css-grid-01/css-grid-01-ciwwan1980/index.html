@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .grid {
+            /* height: 650px; */
+            min-height: 100vh;
+            display: grid;
+            background-color: white;
+            border: 5px solid red;
+            grid-template: repeat(4, 1fr) / repeat(4, 1fr)
+                
+                /* display: grid; 
+    grid-template-columns: auto auto auto auto; it will display table equally*/
+
+        }
+
+        div {
+            border: 2px solid red;
+        }
+
+        .item {
+            border: 5px solid blue;
+            color: black;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .two {
+            grid-column: 2 / 4;
+            background-color: blue;
+        }
+
+        .six {
+            grid-column: 3 / 5;
+            background-color: green;
+        }
+
+        .nine {
+            grid-column: 2;
+            grid-row: 3 / 5;
+            background-color: orange;
+        }
+
+        .ten {
+            grid-column: 4;
+            grid-row: 3 / 5;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="item one">1</div>
+        <div class="item two">2</div>
+        <div class="item three">3</div>
+        <div class="item four">4</div>
+        <div class="item five">5</div>
+        <div class="item six">6</div>
+        <div class="item seven">7</div>
+        <div class="item eight">8</div>
+        <div class="item nine">9</div>
+        <div class="item ten">10</div>
+        <div class="item eleven">11</div>
+        <div class="item twelve">12</div>
+    </div>
+</body>
+
+</html>
