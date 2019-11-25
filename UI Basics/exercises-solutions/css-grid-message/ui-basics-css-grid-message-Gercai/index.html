@@ -1,0 +1,106 @@
+<!-- # CSS Grid text
+Create the message by using CSS grid.
+![Css Grid example](css-grid-message-example.png)
+Look at the examples to make it responsive.
+![Css Grid example tablet](css-grid-message-tablet-example.png)
+![Css Grid example mobile](css-grid-message-mobile-example.png) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            background-color: rosybrown;
+
+        }
+
+        .grit-box{
+            grid-gap: 10px;
+            display: grid;  
+            margin-top: 30vh;
+            width: 70%;
+            grid-template-columns:  repeat(10, 1fr); 
+        }
+
+        .grit-item{
+             font-size: 2rem;
+            box-shadow: 0 0 5px black;
+            text-align: center;
+            background-color: blue;
+            height: 50px;
+            border: solid black 1px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .space2{
+            grid-column: 2 span; 
+        }
+
+/* Tablet */
+@media screen and (max-width: 900px){
+
+.space1{grid-column: 7 span; }
+.space2{grid-column: 2 span; }
+.space3{grid-column: 2 span; }
+}
+
+
+/* Smartphone */
+@media screen and (max-width: 600px){
+
+.space1{grid-column: 7 span; }
+.space2{grid-column: 6 span; }
+.space3{grid-column: 8 span; }
+}
+
+
+    
+    </style>
+</head>
+<body>
+
+<div class="grit-box">
+    <div class="grit-item">c</div>
+    <div class="grit-item">s</div>
+    <div class="grit-item">s</div>
+    <div class="grit-item space1" ></div>
+    <div class="grit-item">g</div>
+    <div class="grit-item">r</div>
+    <div class="grit-item">i</div>
+    <div class="grit-item">d</div>
+    <div class="grit-item space2"></div>
+    <div class="grit-item">i</div>
+    <div class="grit-item">s</div>
+    <div class="grit-item space3"></div>
+    <div class="grit-item">a</div>
+    <div class="grit-item">w</div>
+    <div class="grit-item">e</div>
+    <div class="grit-item">s</div>
+    <div class="grit-item">o</div>
+    <div class="grit-item">m</div>
+    <div class="grit-item">e</div>
+
+
+
+</div>
+
+
+</body>
+</html>
