@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(10, 30px);
+            grid-template-rows: repeat(2, 30px);
+            background-color: pink;
+            height: 100vh;
+            justify-content: center;
+            align-content: center;
+            padding: 10px;
+            column-gap: 20px;
+            row-gap: 10px;
+        }
+
+        .grid>div {
+            background-color: #367C90B5;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 600;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: -1px 0px 20px #00000036;
+        }
+
+        .grid>div:nth-child(9) {
+            grid-column: span 2;
+        }
+
+
+
+
+        @media (min-width:600px) {
+
+            .grid>div:nth-child(4) {
+                grid-column: 4/-1;
+                /* grid-column: span 7; */
+            }
+
+            .grid>div:nth-child(9) {
+                /* grid-column: 5/-1; */
+                grid-column: span 6;
+                
+            }
+
+            .grid>div:nth-child(12) {
+                grid-column: 3/-1;
+                /* grid-row: 3/ span 1; */
+            }
+
+        }
+
+        @media (min-width:800px) {
+            .grid>div:nth-child(4) {
+                grid-column: span 7;
+            }
+
+            .grid>div:nth-child(9) {
+                grid-column: 5/span 2;
+                /* grid-row: 2/span 1; */
+            }
+
+
+            .grid>div:nth-child(12) {
+                grid-column: span 2;
+             
+            } 
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div>c</div>
+        <div>s</div>
+        <div>s</div>
+        <div></div>
+        <div>g</div>
+        <div>r</div>
+        <div>i</div>
+        <div>d</div>
+        <div></div>
+        <div>i</div>
+        <div>s</div>
+        <div></div>
+        <div>a</div>
+        <div>w</div>
+        <div>e</div>
+        <div>s</div>
+        <div>o</div>
+        <div>m</div>
+        <div>e</div>
+    </div>
+</body>
+
+</html>
