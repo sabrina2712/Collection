@@ -62,3 +62,21 @@ const hello = ({ name, greeting = "Hello", city }) => {
 };
 
 hello({ name: "Paul", city: "LA" });
+
+/**
+ * Exercise
+ *
+ */
+
+console.log("EXERCISE");
+
+// Use destructuring in the map paramters to log out
+Object.entries(room).map(entrie => {
+  console.log(propertie, value);
+});
+
+// Use destructuring to print first user and use rest operator to print the rest
+const user = ["Jessica", "Paul"];
+
+// Print out all keys of the following object
+const user1 = { name: "Some", class: 1, city: "Berlin" };
