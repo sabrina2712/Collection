@@ -79,4 +79,4 @@ Object.entries(room).map(entrie => {
 const user = ["Jessica", "Paul"];
 
 // Print out all keys of the following object
-const user = { name: "Some", class: 1, city: "Berlin" };
+const user1 = { name: "Some", class: 1, city: "Berlin" };
