@@ -18,12 +18,10 @@ SubModules
   - [x] Recursion
 - Data Structure
   - [x] Object Intro
-  - [x] Object Scope
-  - [x] Array Intro
-  - [x] Basic Array Methods
-  - [x] Advanced Array Methods
-  - [ ] Converting Arrays and Objects
-  - [ ] Destructuring
+  - [ ] **Object Scope**
+  - [ ] Array Intro
+  - [ ] Basic Array Methods
+  - [ ] Advanced Array Methods
   - [ ] Classes
 - Error
   - [ ] Debugging (Node inspect and VS Code)
