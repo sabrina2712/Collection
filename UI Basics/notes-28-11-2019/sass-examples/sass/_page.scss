@@ -1,0 +1,14 @@
+body {
+    background-color: $brand-color;
+    font-family: $sans-serif-font;
+}
+
+.page {
+    min-height: 100vh;
+}
+
+.page-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

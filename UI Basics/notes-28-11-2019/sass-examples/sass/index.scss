@@ -1,0 +1,51 @@
+// Helpers
+@import "variables";
+@import "mixins";
+@import "resets";
+
+// UI elements
+@import "headlines";
+
+// Layout
+@import "page";
+
+// Buttons
+.button-sm {
+    @include button-base($font-sm);
+}
+
+button,
+.button-m {
+    @include button-base($font-m);
+}
+
+.button-l {
+    @include button-base($font-l);
+}
+
+// Site hero
+.hero {
+    min-height: 600px;
+    background-color: black;
+    color: white;
+
+    &-title {
+        position: relative;
+        font-size: $font-xxl;
+        padding-left: 20px;
+
+        &:before {
+            position: absolute;
+            left: 2px;
+            width: 10px;
+            height: 100%;
+            background-color: $brand-color;
+            content: '';
+        }
+    }
+
+    &-button {
+        padding: 16px;
+        @include button-base(16px);
+    }
+}

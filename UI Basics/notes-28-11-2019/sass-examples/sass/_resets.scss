@@ -1,0 +1,13 @@
+ul {
+    @include reset-paddings-margins;
+    @include reset-list;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+p {
+    @include reset-paddings-margins;
+}
