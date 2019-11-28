@@ -10,7 +10,7 @@
 8. write npm scripts in package.json: 
 ```json
 "scripts": {
-    "watch-styles": "node-sass -w sass -o styles",
+    "watch-styles": "node-sass -w -r sass -o styles",
     "build-styles": "node-sass sass -o styles"
 }
 ```
