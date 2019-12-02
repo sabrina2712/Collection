@@ -1,0 +1,7 @@
+@mixin hover($colorToChange, $amountToApply, $isDarken: true) {
+  @if $isDarken {
+    background-color: darken($color: $colorToChange, $amount: $amountToApply);
+  } @else {
+    background-color: lighten($color: $colorToChange, $amount: $amountToApply);
+  }
+}

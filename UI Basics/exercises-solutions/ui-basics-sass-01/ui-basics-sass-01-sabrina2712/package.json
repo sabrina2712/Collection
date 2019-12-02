@@ -1,0 +1,25 @@
+{
+  "name": "ui-basics-sass-01-sabrina2712",
+  "version": "1.0.0",
+  "description": "Let's create and overview of the styled elements available. Currently our styleguide has only buttons an a menu.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+"watch-styles": "node-sass -w -r sass -o styles",
+    "build-styles": "node-sass sass -o styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dci-ber-fbw21/ui-basics-sass-01-sabrina2712.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dci-ber-fbw21/ui-basics-sass-01-sabrina2712/issues"
+  },
+  "homepage": "https://github.com/dci-ber-fbw21/ui-basics-sass-01-sabrina2712#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

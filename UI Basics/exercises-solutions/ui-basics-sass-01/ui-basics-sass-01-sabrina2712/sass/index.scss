@@ -1,0 +1,98 @@
+@import "variables";
+@import "mixin";
+
+.example {
+  font-weight: bold;
+  border: gray solid 1px;
+ @include padding(20px);
+
+  & > * {
+    margin: 20px;
+  }
+}
+
+.example-center {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  padding: 10px;
+  color: white;
+  border-radius: 10%;
+  font-weight: bold;
+
+  &-primary {
+    background-color: $myPrimaryColor;
+    &:hover {
+      @include hover($myPrimaryColor, 30%,true);
+    }
+  }
+  &-success {
+    background-color: $mySuccessColor;
+    &:hover {
+      @include hover($mySuccessColor, 30%);
+    }
+  }
+
+  &-danger {
+    background-color: $myDangerColor;
+    &:hover {
+      @include hover($myDangerColor, 30%, false);
+    }
+  }
+
+  &-warning {
+    background-color: $myWarningColor;
+    &:hover {
+      @include hover($myWarningColor, 30%, false);
+    }
+  }
+  &-info {
+    background-color: $myInfoColor;
+    &:hover {
+      @include hover($myInfoColor, 30%, false);
+    }
+  }
+  &-light {
+    background-color: $myLightColor;
+    &:hover {
+      @include hover($myLightColor, 30%);
+    }
+  }
+  &-dark {
+    background-color: $myDarkColor;
+    &:hover {
+      @include hover($myDarkColor, 30%, false);
+    }
+  }
+  &-link {
+    color: $myInfoColor;
+    background-color: white;
+    border: none;
+  }
+}
+
+.menu {
+  @include padding(20px);
+  width: 170px;
+  height: 220px;
+  background-color: lightgray;
+
+
+  &-list {
+    @include padding(10px);
+    list-style: none;}
+
+    &-item {
+      @include padding(10px);
+      width: 100px;
+      height: 30px;
+      background-color: gray;
+      margin: 10px;
+     
+    }
+    &-link {
+      color: black;
+    }
+  }
+}
