@@ -1,0 +1,35 @@
+@mixin button-style {
+  padding: 10px 20px;
+  color: white;
+  border-radius: 4px;
+}
+
+// @mixin button-small {
+//   padding: 10px 20px;
+//   color: white;
+//   border-radius: 6px;
+//   font-size: 0.5rem;
+// }
+
+// @mixin button-normal {
+//   padding: 10px 20px;
+//   color: white;
+//   border-radius: 6px;
+//   font-size: 2rem;
+// }
+
+// @mixin button-large {
+//   padding: 10px 20px;
+//   color: white;
+//   border-radius: 6px;
+//   font-size: 3rem;
+// }
+
+// EXPERIMENT --- Button hover
+@mixin button-variation($color, $degree, $font-size) {
+  background: $color;
+  &:hover {
+    background: darken($color, $degree);
+    font-size: $font-size;
+  }
+}

@@ -1,0 +1,129 @@
+body {
+  font-family: sans;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: $primary-color;
+}
+
+.button {
+  transition: 0.2s 0.2s;
+  @include button-style;
+  &-primary {
+    @include button-variation($primary, 20%, 0.4rem);
+
+    //   background: $primary;
+    //   &:hover {
+    //     background: darken($primary, 20%);
+    //     @include button-large;
+    //   }
+  }
+
+  &-success {
+    @include button-variation($success, 20%, 0.6rem);
+    // background: $success;
+    // &:hover {
+    //   background: darken($success, 20%);
+    //   @include button-large;
+    // }
+  }
+
+  &-danger {
+    @include button-variation($danger, 20%, 0.8rem);
+
+    // background: $danger;
+    // &:hover {
+    //   background: darken($danger, 20%);
+    //   @include button-normal;
+    // }
+  }
+
+  &-warning {
+    @include button-variation($warning, 20%, 1.4rem);
+
+    // background: $warning;
+    // &:hover {
+    //   background: darken($warning, 20%);
+    //   @include button-normal;
+    // }
+  }
+
+  &-info {
+    @include button-variation($info, 20%, 1.2rem);
+
+    // background: $info;
+    // &:hover {
+    //   background: darken($info, 20%);
+    //   @include button-small;
+    // }
+  }
+
+  &-light {
+    @include button-variation($light, 20%, 0.8rem);
+
+    // background: $light;
+    // &:hover {
+    //   background: lighten($light, 40%);
+    //   @include button-small;
+    //   color: rgb(42, 42, 42);
+    // }
+  }
+
+  &-dark {
+    @include button-variation($dark, 20%, 0.6rem);
+
+    // background: $dark;
+    // &:hover {
+    //   background: lighten($dark, 50%);
+    //   @include button-small;
+    //   color: rgb(34, 34, 34);
+    // }
+  }
+
+  &-link {
+    @include button-variation($link, 20%, 0.4rem);
+
+    //   background: $link;
+    //   color: blue;
+    //   &:hover {
+    //     background: darken($link, 20%);
+    //     @include button-small;
+    //   }
+  }
+}
+
+section {
+  border: 1px solid rgb(212, 212, 212);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+nav {
+  background: white;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  li {
+    padding: 10px;
+    background: $primary-color;
+    margin: 10px;
+    border-radius: 4px;
+    transition: 0.2s;
+  }
+}
+
+li:hover {
+  a {
+    color: white;
+  }
+}
+
+li:nth-child(1):hover {
+  background: $primary;
+}
+li:nth-child(2):hover {
+  background: $success;
+}
+li:nth-child(3):hover {
+  background: $danger;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "ui-basics-sass-01-motokikasai",
+  "version": "1.0.0",
+  "description": "Let's create and overview of the styled elements available. Currently our styleguide has only buttons an a menu.",
+  "main": "index.js",
+  "scripts": {
+    "watch-styles": "node-sass -w -r sass -o styles",
+    "build-styles": "node-sass sass -o styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dci-ber-fbw21/ui-basics-sass-01-motokikasai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dci-ber-fbw21/ui-basics-sass-01-motokikasai/issues"
+  },
+  "homepage": "https://github.com/dci-ber-fbw21/ui-basics-sass-01-motokikasai#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
