@@ -1,5 +1,7 @@
 # Objects
 
+> Work in progress
+
 Objects are groups of values.
 We organize them in key (property) <-> value pairs
 
