@@ -1,0 +1,21 @@
+// Importing individual modules
+// Import only what you need
+
+// // Required: other modules rely on these modules, without importing these 3, things will break :(
+// @import "../node_modules/bootstrap/scss/functions";
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/mixins";
+
+// // Optional
+// // Normalizing things ala bootstrap, no need to include normalize.css when using bootstrap reboot: https://getbootstrap.com/docs/4.4/content/reboot/
+// @import "../node_modules/bootstrap/scss/reboot";
+
+// @import "../node_modules/bootstrap/scss/grid";
+// @import "../node_modules/bootstrap/scss/utilities";
+// @import "../node_modules/bootstrap/scss/typography";
+
+// Importing the entire library
+// Take a look at the compiled css, it is a lot longer now!
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// No custom CSS!
