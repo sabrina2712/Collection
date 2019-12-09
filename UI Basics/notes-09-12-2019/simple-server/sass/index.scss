@@ -1,0 +1,17 @@
+@import "variables";
+// Cutomize bootstrap
+// We need to add all the customization before we import bootstrap
+// you can use either a partial (like in this example), or just put all the variables above the bootstrap import
+@import "customize-bootstrap";
+// Import bootstrap (entire library -> will result it large css file)
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// Or import only the parts you need
+// // Required: these modules are required for other modules to work, so you must include them
+// @import "../node_modules/bootstrap/scss/functions";
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/mixins";
+
+// // Optional
+// @import "../node_modules/bootstrap/scss/reboot";
