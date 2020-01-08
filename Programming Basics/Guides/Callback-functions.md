@@ -167,7 +167,7 @@ const filteredUsers = filter(users, (userName) => userName.length > 4);
 console.log(filteredUsers); // [ 'Albert', 'Jessica', 'Alejandra' ]
 ```
 
-I hope this helps to show you the power of callbacks. Once you get used to callbacks like this (Array methods) they fell much more natural. If I would give you a list of names and the task to create a new list with all the names that are longer the 4 characters you would not need to think about:
+I hope this helps to show you the power of callbacks. Once you get used to callbacks like this (Array methods) they feel much more natural. If I would give you a list of names and the task to create a new list with all the names that are longer the 4 characters you would not need to think about:
 
 - Loop over each name
 - Add name to new list
