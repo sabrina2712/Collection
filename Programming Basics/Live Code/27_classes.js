@@ -119,3 +119,23 @@ sidebar.toggleSidebarVisibility();
 
 quitVSCode();
 console.log(vsCodeStore);
+
+// After exercise
+const goodbye = function() {
+  console.log(this.prop);
+  console.log("Tschö");
+};
+function Hello(callback) {
+  this.callback = callback;
+  this.prop = "Hi";
+  this.callback();
+}
+
+const hello = new Hello(goodbye);
+
+// Example this is fake
+networkRequest("www.google.com", (data) => {
+  console.log(data);
+});
+
+console.log(data);
