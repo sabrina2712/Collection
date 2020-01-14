@@ -22,6 +22,16 @@ class Dog extends Animal {
   }
 }
 
+// as Prototypal inheritance
+function Dog(name) {
+  this.name = name;
+  this.tail = true;
+}
+
+Dog.prototype.kopieren = function() {
+  this.tail = false;
+};
+
 class Fish extends Animal {
   constructor(name) {
     super(name, "Fish", 0, "Blubb");
