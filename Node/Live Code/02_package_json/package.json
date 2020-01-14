@@ -1,0 +1,20 @@
+{
+  "name": "first_package",
+  "version": "4.0.0",
+  "description": "Don't know just checking",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "Fun"
+  ],
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+    "is-even": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
