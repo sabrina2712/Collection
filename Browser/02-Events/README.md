@@ -35,8 +35,10 @@ The callback function takes one param: the `event`.
 
 `event.preventDefault()` -> stop the default behavior of an element, like forms, or anchor links
 
-## Event bubling and capturing
+## Event bubbling and capturing
 
 ![Event bubbling and capturing](../images/event-bubbling-capturing.png)
+
+## Event bubbling 
 
 ![Event bubbling](../images/event-bubbling.png)
