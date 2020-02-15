@@ -37,6 +37,6 @@ The callback function takes one param: the `event`.
 
 ## Event bubling and capturing
 
-![event bubling and capturing](images/event-bubbling-capturing.png)
+![Event bubbling and capturing](../images/event-bubbling-capturing.png)
 
-![event bubling](images/event-bubbling.png)
+![Event bubbling](../images/event-bubbling.png)
