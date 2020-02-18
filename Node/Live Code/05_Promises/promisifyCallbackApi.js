@@ -42,13 +42,3 @@ getFilePromise("./testFiles/example.txt")
   .then(() => getFilePromise("./testFiles/exampl.txt"))
   .then(fileHandler)
   .catch(console.error);
-
-const log = (val) => {
-  console.log(val);
-  return val + 1;
-};
-
-const thenFunctions = [log, log, log, log];
-const catchfunction = undefined;
-const promiseData = 1;
-console.log(thenFunctions.map((func) => func(promiseData)));
