@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    background-color: mistyrose;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero {
+     background-color: coral;
+    font-size: 48px;
+    color: white;
+}
+
+.hero.vanilla {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 2s;
+}
+
+.hero.jquery {
+    display: none;
+}
+
+h1.active {
+    font-size: 61px;
+}
+
+.content-block p {
+    display: none;
+}
