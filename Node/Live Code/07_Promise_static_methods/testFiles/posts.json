@@ -1,0 +1,6 @@
+[
+  { "title": "JavaScript is great!", "author": 2, "id": 1 },
+  { "title": "Bootstrap 4 is out!", "author": 3, "id": 2 },
+  { "title": "How to use the Chrome Dev Console", "author": 1, "id": 3 },
+  { "title": "Dead authors are dead", "author": 4, "id": 4 }
+]
