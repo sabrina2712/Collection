@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Peter Parker",
+    "twitter": "@peterparker",
+    "bio": "Australian Coder",
+    "id": 1
+  },
+  {
+    "name": "Paul Shawn",
+    "twitter": "@paulshawn",
+    "bio": "British CSS fanatic",
+    "id": 2
+  },
+  {
+    "name": "Mary Poppins",
+    "twitter": "@marrypoppins",
+    "bio": "Nanny of developers",
+    "id": 3
+  }
+]
