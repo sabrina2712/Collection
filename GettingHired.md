@@ -53,3 +53,7 @@ People don't hire knowledge the hire attitude.
 ## 6. Coding Challenge
 
 It's not the solution but the approach.
+
+## 7. Body Language
+
+https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are
