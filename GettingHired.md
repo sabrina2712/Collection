@@ -57,3 +57,7 @@ It's not the solution but the approach.
 ## 7. Body Language
 
 https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are
+
+## 8. Look for a challenge
+
+You should leave when you are comfy. Look for new challenges, keep on self developing.
